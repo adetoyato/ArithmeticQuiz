@@ -120,7 +120,7 @@ public static class ArithmeticQuiz
         }
         double answerPercentage = (double)yourScore / questionsAvailable * 100;
         Console.WriteLine($"The quiz has ended. Your score is {yourScore} out of {questionsAvailable}");
-        Console.WriteLine($"You had answered {answerPercentage}% of the questions correctly.");
+        Console.WriteLine($"You answered {answerPercentage}% of the questions correctly.");
         Console.WriteLine();
 
         bool inputTrue = false;
