@@ -13,13 +13,13 @@ public static class ArithmeticQuiz
     {
 
         Console.WriteLine("Welcome to the Arithmetic Quiz!");
-        Console.WriteLine("Before we proceed, please select how many questions would you like to answer:");
         Thread.Sleep(1000);
         startQuiz();
     }
 
     static void startQuiz()
     {
+        Console.WriteLine("Before we proceed, please select how many questions would you like to answer:");
         Console.WriteLine();
         Console.WriteLine("Up Arrow Key: Novice (5 Questions)\nDown Arrow Key: Intermediate (10 Questions)\nLeft Arrow Key: Advanced (15 Questions)\nRight Arrow Key: Expert (20 Questions)");
         Level difficultyAvailable = Level.Novice;
@@ -130,12 +130,13 @@ public static class ArithmeticQuiz
             String booleanInput = Console.ReadLine();
             Console.WriteLine();
 
-            if (booleanInput.Equals("yes, StringComparison.OrdinalIgnoreCase") || booleanInput.Equals("y", StringComparison.OrdinalIgnoreCase))
+            if (booleanInput.Equals("yes", StringComparison.OrdinalIgnoreCase) || booleanInput.Equals("y", StringComparison.OrdinalIgnoreCase))
             {
                 startQuiz();
             }
             else if (booleanInput.Equals("no", StringComparison.OrdinalIgnoreCase) || booleanInput.Equals("n", StringComparison.OrdinalIgnoreCase))
             {
+                Console.WriteLine("See you next time.");
                 Environment.Exit(0);
             }
             else
