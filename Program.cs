@@ -49,6 +49,7 @@ public static class ArithmeticQuiz
             Thread.Sleep(1000);
             Console.WriteLine();
             Console.WriteLine("Up Arrow Key: Novice (5 Questions)\nDown Arrow Key: Intermediate (10 Questions)\nLeft Arrow Key: Advanced (15 Questions)\nRight Arrow Key: Expert (20 Questions)");
+            Console.WriteLine();
             Console.WriteLine("If you'd like to proceed, please press enter. If not, then choose your level using arrow keys again.");
         } while (keyInfo.Key != ConsoleKey.Enter);
 
@@ -77,8 +78,8 @@ public static class ArithmeticQuiz
 
         for (int i = 0; i < questionsAvailable; i++)
         {
-            int num1 = random.Next(15);
-            int num2 = random.Next(15);
+            int num1 = random.Next(1, 15);
+            int num2 = random.Next(1, 15);
             int yourAnswer;
 
             switch (random.Next(1, 5))
@@ -132,6 +133,7 @@ public static class ArithmeticQuiz
 
             if (booleanInput.Equals("yes", StringComparison.OrdinalIgnoreCase) || booleanInput.Equals("y", StringComparison.OrdinalIgnoreCase))
             {
+                Console.Clear();
                 startQuiz();
             }
             else if (booleanInput.Equals("no", StringComparison.OrdinalIgnoreCase) || booleanInput.Equals("n", StringComparison.OrdinalIgnoreCase))
