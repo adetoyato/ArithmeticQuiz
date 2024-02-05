@@ -130,7 +130,7 @@ public static class ArithmeticQuiz
             String booleanInput = Console.ReadLine();
             Console.WriteLine();
 
-            if (booleanInput.Equals("yes, StringComparison.OrdinalIgnoreCase") || booleanInput.Equals("y", StringComparison.OrdinalIgnoreCase))
+            if (booleanInput.Equals("yes", StringComparison.OrdinalIgnoreCase) || booleanInput.Equals("y", StringComparison.OrdinalIgnoreCase))
             {
                 startQuiz();
             }
