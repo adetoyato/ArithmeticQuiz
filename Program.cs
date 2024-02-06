@@ -95,23 +95,23 @@ public static class ArithmeticQuiz
             {
                 case 1: //Addition
                     Console.Write($"Question {i + 1}: What is {num1} + {num2}?\nYour Answer: ");
-                    Console.WriteLine();
                     yourAnswer = num1 + num2;
+                    Console.WriteLine();
                     break;
                 case 2: //Subtraction
                     Console.Write($"Question {i + 1}: What is {num1} - {num2}?\nYour Answer: ");
-                    Console.WriteLine();
                     yourAnswer = num1 - num2;
+                    Console.WriteLine();
                     break;
                 case 3: //Multiplication
                     Console.WriteLine($"Question {i + 1}: What is {num1} * {num2}?\nYour Answer: ");
-                    Console.WriteLine();
                     yourAnswer = num1 * num2;
+                    Console.WriteLine();
                     break;
                 case 4: //Division
                     Console.Write($"Question {i + 1}: What is {num1} / {num2}?\nYour Answer: ");
-                    Console.WriteLine();
                     yourAnswer = num1 / num2;
+                    Console.WriteLine();
                     break;
                 default:
                     yourAnswer = 0;
