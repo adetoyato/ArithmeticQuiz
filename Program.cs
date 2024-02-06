@@ -2,14 +2,6 @@
 
 public static class ArithmeticQuiz
 {
-    //enum Level
-    //{
-    //    Novice,
-    //    Intermediate,
-    //    Advanced,
-    //    Expert
-    //}
-    //take out comment if you want to try the other method
     public static void Main(string[] args)
     {
 
@@ -20,60 +12,6 @@ public static class ArithmeticQuiz
 
     static void startQuiz()
     {
-        //Console.WriteLine("Before we proceed, please select how many questions would you like to answer:");
-        //Console.WriteLine();
-        //Console.WriteLine("Up Arrow Key: Novice (5 Questions)\nDown Arrow Key: Intermediate (10 Questions)\nLeft Arrow Key: Advanced (15 Questions)\nRight Arrow Key: Expert (20 Questions)");
-        //Level difficultyAvailable = Level.Novice;
-
-        //ConsoleKeyInfo keyInfo;
-        //do
-        //{
-        //    keyInfo = Console.ReadKey(true);
-
-        //    switch (keyInfo.Key)
-        //    {
-        //        case ConsoleKey.UpArrow:
-        //            difficultyAvailable = Level.Novice;
-        //            break;
-        //        case ConsoleKey.DownArrow:
-        //            difficultyAvailable = Level.Intermediate;
-        //            break;
-        //        case ConsoleKey.LeftArrow:
-        //            difficultyAvailable = Level.Advanced;
-        //            break;
-        //        case ConsoleKey.RightArrow:
-        //            difficultyAvailable = Level.Expert;
-        //            break;
-        //    }
-        //    Console.Clear();
-        //    Console.WriteLine($"You have selected: {difficultyAvailable}");
-        //    Thread.Sleep(1000);
-        //    Console.WriteLine();
-        //    Console.WriteLine("Up Arrow Key: Novice (5 Questions)\nDown Arrow Key: Intermediate (10 Questions)\nLeft Arrow Key: Advanced (15 Questions)\nRight Arrow Key: Expert (20 Questions)");
-        //    Console.WriteLine();
-        //    Console.WriteLine("If you'd like to proceed, please press enter. If not, then choose your level using arrow keys again.");
-        //} while (keyInfo.Key != ConsoleKey.Enter);
-
-        //int questionsAvailable = 0;
-
-        //switch (difficultyAvailable)
-        //{
-        //    case Level.Novice:
-        //        questionsAvailable = 5;
-        //        break;
-        //    case Level.Intermediate:
-        //        questionsAvailable = 10;
-        //        break;
-        //    case Level.Advanced:
-        //        questionsAvailable = 15;
-        //        break;
-        //    case Level.Expert:
-        //        questionsAvailable = 20;
-        //        break;
-        //}
-        //Console.Clear();
-        //Console.WriteLine($"Level has been chosen. Your level is: {difficultyAvailable}. Let us start the quiz.");
-        //uncomment from the line above if you'd like to try this method!
 
         Random random = new Random();
         int questionsAvailable = random.Next(5, 16); //Randomizes how many questions are to be answered
@@ -117,7 +55,6 @@ public static class ArithmeticQuiz
             while (!int.TryParse(Console.ReadLine(), out answerHere)) //Ensures that the input are only valid numbers
             {
                 Console.WriteLine("Answer is invalid. Please only use numbers.");
-                Console.WriteLine();
             }
             if (answerHere == yourAnswer)
             {
