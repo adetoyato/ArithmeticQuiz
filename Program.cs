@@ -13,7 +13,7 @@ public static class ArithmeticQuiz
     public static void Main(string[] args)
     {
 
-        Console.WriteLine("Welcome to the Arithmetic Quiz!");
+        Console.WriteLine("Loading Arithmetic Quiz...");
         Thread.Sleep(1000);
         startQuiz();
     }
@@ -95,18 +95,22 @@ public static class ArithmeticQuiz
             {
                 case 1: //Addition
                     Console.Write($"Question {i + 1}: What is {num1} + {num2}?\nYour Answer: ");
+                    Console.WriteLine();
                     yourAnswer = num1 + num2;
                     break;
                 case 2: //Subtraction
                     Console.Write($"Question {i + 1}: What is {num1} - {num2}?\nYour Answer: ");
+                    Console.WriteLine();
                     yourAnswer = num1 - num2;
                     break;
                 case 3: //Multiplication
                     Console.WriteLine($"Question {i + 1}: What is {num1} * {num2}?\nYour Answer: ");
+                    Console.WriteLine();
                     yourAnswer = num1 * num2;
                     break;
                 case 4: //Division
                     Console.Write($"Question {i + 1}: What is {num1} / {num2}?\nYour Answer: ");
+                    Console.WriteLine();
                     yourAnswer = num1 / num2;
                     break;
                 default:
