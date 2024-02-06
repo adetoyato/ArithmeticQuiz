@@ -96,22 +96,18 @@ public static class ArithmeticQuiz
                 case 1: //Addition
                     Console.Write($"Question {i + 1}: What is {num1} + {num2}?\nYour Answer: ");
                     yourAnswer = num1 + num2;
-                    Console.WriteLine();
                     break;
                 case 2: //Subtraction
                     Console.Write($"Question {i + 1}: What is {num1} - {num2}?\nYour Answer: ");
                     yourAnswer = num1 - num2;
-                    Console.WriteLine();
                     break;
                 case 3: //Multiplication
                     Console.WriteLine($"Question {i + 1}: What is {num1} * {num2}?\nYour Answer: ");
                     yourAnswer = num1 * num2;
-                    Console.WriteLine();
                     break;
                 case 4: //Division
                     Console.Write($"Question {i + 1}: What is {num1} / {num2}?\nYour Answer: ");
                     yourAnswer = num1 / num2;
-                    Console.WriteLine();
                     break;
                 default:
                     yourAnswer = 0;
@@ -121,10 +117,12 @@ public static class ArithmeticQuiz
             while (!int.TryParse(Console.ReadLine(), out answerHere)) //Ensures that the input are only valid numbers
             {
                 Console.WriteLine("Answer is invalid. Please only use numbers.");
+                Console.WriteLine();
             }
             if (answerHere == yourAnswer)
             {
                 Console.WriteLine("Your answer is correct!");
+                Console.WriteLine();
                 yourScore++;
             }
             else
