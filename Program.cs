@@ -19,7 +19,6 @@ public static class ArithmeticQuiz
         Console.Clear();
         Console.WriteLine($"Questions to answer: {questionsAvailable}"); //Displays how many questions are to be expected
         Console.WriteLine();
-        //comment this out to avoid confusion if you wish to try the method above!
 
         int yourScore = 0;
 
@@ -54,11 +53,11 @@ public static class ArithmeticQuiz
             int answerHere;
             while (!int.TryParse(Console.ReadLine(), out answerHere)) //Ensures that the input are only valid numbers
             {
-                Console.WriteLine("Answer is invalid. Please only use numbers.");
+                Console.WriteLine("Answer is invalid. Please only use numbers."); //Shows when there are invalid characters used
             }
             if (answerHere == yourAnswer)
             {
-                Console.WriteLine("Your answer is correct!");
+                Console.WriteLine("Your answer is correct!"); //Shows when user answer is true
                 Console.WriteLine();
                 yourScore++;
             }
@@ -68,8 +67,8 @@ public static class ArithmeticQuiz
             }
         }
         double answerPercentage = (double)yourScore / questionsAvailable * 100; //Computes the percentage of correct answers
-        Console.WriteLine($"The quiz has ended. Your score is {yourScore} out of {questionsAvailable}");
-        Console.WriteLine($"You answered {answerPercentage}% of the questions correctly.");
+        Console.WriteLine($"The quiz has ended. Your score is {yourScore} out of {questionsAvailable}"); //Shows how many answers the user got right
+        Console.WriteLine($"You answered {answerPercentage}% of the questions correctly."); //Shows the percentage of correct answers
         Console.WriteLine();
 
         bool inputTrue = false;
