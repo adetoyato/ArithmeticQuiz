@@ -53,7 +53,7 @@ public static class ArithmeticQuiz
             int answerHere;
             while (!int.TryParse(Console.ReadLine(), out answerHere)) //Ensures that the input are only valid numbers
             {
-                Console.WriteLine("Answer is invalid. Please only use numbers."); //Shows when there are invalid characters used
+                Console.WriteLine("Answer is invalid. Please only use numbers. \nAnswer again: "); //Shows when there are invalid characters used
             }
             if (answerHere == yourAnswer)
             {
@@ -68,6 +68,7 @@ public static class ArithmeticQuiz
         }
         double answerPercentage = (double)yourScore / questionsAvailable * 100; //Computes the percentage of correct answers
         Console.WriteLine($"The quiz has ended. Your score is {yourScore} out of {questionsAvailable}"); //Shows how many answers the user got right
+        answerPercentage = Math.Round(answerPercentage, 2); //percentage only stays in 2 decimal points
         Console.WriteLine($"You answered {answerPercentage}% of the questions correctly."); //Shows the percentage of correct answers
         Console.WriteLine();
 
